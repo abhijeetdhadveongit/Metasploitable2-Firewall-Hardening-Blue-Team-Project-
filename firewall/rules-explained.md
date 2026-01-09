@@ -1,12 +1,11 @@
-This document explains the logic and security purpose of each iptables rule
+###This document explains the logic and security purpose of each iptables rule
 used in this project.
 
-1. Default Policies
+###1. Default Policies
 
 -P INPUT DROP
 -P FORWARD DROP
 -P OUTPUT ACCEPT
-
 Explanation:
 -All inbound traffic is denied by default (default-deny model)
 -Forwarding is disabled to prevent routing abuse
@@ -14,10 +13,9 @@ Explanation:
 
 
 
-2. Loopback Traffic
+###2. Loopback Traffic
 
 -A INPUT -i lo -j ACCEPT
-
 Explanation:
 -Allows internal system communication
 -Required for local services and OS stability
@@ -25,10 +23,9 @@ Explanation:
 
 
 
-3. Established and Related Connections
+###3. Established and Related Connections
 
 -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-
 Explanation:
 -Allows return traffic for connections initiated by the host
 -Prevents breaking legitimate outbound connections
@@ -36,10 +33,9 @@ Explanation:
 
 
 
-4. ICMP Traffic
+###4. ICMP Traffic
 
 -A INPUT -p icmp -j ACCEPT
-
 Explanation:
 -Allows basic network diagnostics (ping)
 -Confirms host availability
@@ -47,7 +43,7 @@ Explanation:
 
 
 
-5. Logging Rule
+###5. Logging Rule
 
 -A INPUT -j LOG --log-prefix "DROP_INPUT: "
 
@@ -58,7 +54,7 @@ Explanation:
 
 
 
-7. Expected Outcome
+###7. Expected Outcome
 
 -Nmap scans show all ports as filtered
 -No SYN-ACK or RST responses are returned
@@ -69,7 +65,7 @@ Analysis:
 - No SYN-ACK responses were sent
 - No TCP RST packets were observed
 
-Conclusion:
+###Conclusion:
 The absence of responses confirms that packets were silently dropped
 by the host-based firewall, validating a stealth firewall configuration.
 
