@@ -41,18 +41,26 @@ This behavior confirms **successful firewall hardening**, not misconfiguration.
 
 ---
 
-## Before vs After
+### Before vs After
 
-Before - 
+##Before - 
+
 1.Open ports - 25 +.
+
 2.Port scan visibility - high.
+
 3.Attack surface - Extremely high.
+
 4.Recon effectiveness - Full.
 
-After - 
+##After - 
+
 1.Open ports - 0.
+
 2.Port scan visibility - None.
+
 3.Attack surface - Minimal.
+
 4.Recon effectiveness - Ineffective.
 ---
 
