@@ -1,13 +1,15 @@
-Architecture Overview
+## Architecture Overview 
 
-1. High-Level Architecture
+
+
+## 1. High-Level Architecture
 
 This project uses a simple two-node lab architecture designed to simulate
 real-world attacker and defender roles.
  
+ ---
  
- 
-2. Components
+## 2. Components
 
  2.1 Attacker System
  - Operating System: Kali Linux
@@ -22,9 +24,9 @@ real-world attacker and defender roles.
  - Security Control Implemented:
   - Host-based firewall using iptables
 
+---
 
-
-3. Network Design
+## 3. Network Design
 
  - Network Type: Host-Only / Internal
  - No internet exposure
@@ -35,9 +37,9 @@ real-world attacker and defender roles.
  - No risk to external systems
  - Full visibility into traffic flow
 
+---
 
-
-4. Security Control Placement
+## 4. Security Control Placement
 
 The firewall is implemented directly on the target host (Metasploitable2),
 acting as the first line of defense before any application-level interaction.
@@ -49,9 +51,9 @@ Control Layering:
 2. Service-level controls (implicit via firewall)
 3. Logging and monitoring
 
+---
 
-
-5. Architectural Goal
+## 5. Architectural Goal
 
 The architecture focuses on **attack surface reduction** rather than
 vulnerability remediation, demonstrating how exposure control alone can
