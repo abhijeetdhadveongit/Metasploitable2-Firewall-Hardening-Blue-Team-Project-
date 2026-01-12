@@ -14,4 +14,3 @@ iptables -A INPUT -p icmp -j ACCEPT
 iptables -A INPUT -j LOG --log-prefix "DROP_INPUT: "
 
 iptables-save > /etc/iptables.rules
-echo "Firewall rules applied successfully."
