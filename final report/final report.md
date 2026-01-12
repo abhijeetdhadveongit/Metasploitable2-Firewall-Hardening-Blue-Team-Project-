@@ -1,21 +1,25 @@
-Final Report
+## Final Report
 
 
-Summary
-This project validates that host-based firewalls can dramatically reduce
+## Summary
+- This project validates that host-based firewalls can dramatically reduce
 exposure even on legacy systems.
 
 
-Key Finding
-Filtered ports do not indicate failure.
-They confirm effective packet suppression.
+
+## Key Finding:
+
+- Filtered ports do not indicate failure.
+- They confirm effective packet suppression.
 
 
-Security Value
+
+## Security Value
 - Prevents automated exploitation
 - Hides vulnerable services
 - Slows attacker reconnaissance
 
 
-Final Verdict
-Firewall implementation successful.
+
+## Final Verdict
+- Firewall implementation successful.
