@@ -1,3 +1,4 @@
+## iptables setup
 ```
 iptables -F
 iptables -X
@@ -14,3 +15,4 @@ iptables -A INPUT -p icmp -j ACCEPT
 iptables -A INPUT -j LOG --log-prefix "DROP_INPUT: "
 
 iptables-save > /etc/iptables.rules
+```
